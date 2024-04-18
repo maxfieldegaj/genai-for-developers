@@ -86,18 +86,18 @@ async def generate_handler(request: Request, prompt: str = Body(embed=True)):
     response = code_chat.send_message(instructions)
     print(f"Response from Model:\n{response.text}\n")
     # GitLab Agent Call
-    # resp_text = response.candidates[0].content.parts[0].text
+    resp_text = response.candidates[0].content.parts[0].text
 
-    # pr_prompt = f"""Create GitLab merge request using provided details below.
-    # Create new files, commit them and push them to opened merge request.
-    # When creating new files, remove the lines that start with ``` before saving the files.
+    pr_prompt = f"""Create GitLab merge request using provided details below.
+    Create new files, commit them and push them to opened merge request.
+    When creating new files, remove the lines that start with ``` before saving the files.
 
-    # DETAILS: 
-    # {resp_text}
-    # """
+    DETAILS: 
+    {resp_text}
+    """
 
-    # print(pr_prompt)
-    # agent.invoke(pr_prompt)
+    print(pr_prompt)
+    agent.invoke(pr_prompt)
 
     return response.text
 
