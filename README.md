@@ -1,3 +1,8 @@
+## TODO - Max
+- Swap Gitlab for Github
+- Investigate working with existing codebase
+- Investigate slack bot as an input
+
 # GenAI for Developers
 
 Generative AI is opening up doors for individuals and businesses alike. Developers can take advantage of this new technology in a myriad of ways, from simplifying mundane tasks, to building applications that take advantage of the latest technology.
@@ -19,3 +24,5 @@ See [`CODE-OF-CONDUCT.md`](CODE-OF-CONDUCT.md) for details.
 ### License
 
 Apache 2.0; see [`LICENSE`](LICENSE) for details.
+
+
