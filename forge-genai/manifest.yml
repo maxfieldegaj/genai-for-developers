@@ -1,0 +1,17 @@
+modules:
+  jira:issuePanel:
+    - key: forge-genai-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: forge-genai
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  id: ari:cloud:ecosystem::app/0ea2fce6-1930-4975-873a-f78ba0a18522
